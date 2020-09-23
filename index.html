@@ -19,6 +19,7 @@
       src="ressources/bootstrap/bootstrap.min.js"
     ></script>
 
+    <script type="text/javascript" src="assets/js/Note.js"></script>
     <script type="text/javascript" src="assets/js/script.js"></script>
   </head>
   <body>
@@ -48,7 +49,9 @@
                     required
                     autofocus
                   />
-                  <div class="invalid-feedback">Please enter a valid title.</div>
+                  <div class="invalid-feedback">
+                    Please enter a valid title.
+                  </div>
                 </div>
                 <div class="form-group">
                   <label for="text">Note</label>
@@ -70,7 +73,9 @@
                     <option value="primary">Blue</option>
                     <option value="warning">Yellow</option>
                   </select>
-                  <div class="invalid-feedback">Please select a valid color.</div>
+                  <div class="invalid-feedback">
+                    Please select a valid color.
+                  </div>
                 </div>
                 <button type="submit" id="submit" class="btn btn-primary mt-2">
                   Submit
@@ -78,70 +83,7 @@
               </form>
             </div>
           </div>
-          <div class="row mt-5" id="notes">
-            <div class="col-sm-3">
-              <div class="card text-white bg-danger mb-3" id="n8raa">
-                <div class="card-header"><h2 class="m-0">Note Title</h2></div>
-                <div class="card-body">
-                  <p class="card-text">This is my description</p>
-                </div>
-                <div class="card-footer">
-                  <a
-                    href="#"
-                    class="btn btn-outline-light btn-lg btn-block delete-button"
-                    >Löschen</a
-                  >
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-3">
-              <div class="card text-white bg-warning mb-3" id="zv07uo">
-                <div class="card-header">
-                  <h2 class="m-0">Testing Title 2</h2>
-                </div>
-                <div class="card-body">
-                  <p class="card-text">Bla bla bla</p>
-                </div>
-                <div class="card-footer">
-                  <a
-                    href="#"
-                    class="btn btn-outline-light btn-lg btn-block delete-button"
-                    >Löschen</a
-                  >
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-3">
-              <div class="card text-white bg-success mb-3" id="8rojjp">
-                <div class="card-header"><h2 class="m-0">Title 3</h2></div>
-                <div class="card-body">
-                  <p class="card-text">Lorem ipsum dolor sit amet</p>
-                </div>
-                <div class="card-footer">
-                  <a
-                    href="#"
-                    class="btn btn-outline-light btn-lg btn-block delete-button"
-                    >Löschen</a
-                  >
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-3">
-              <div class="card text-white bg-primary mb-3" id="xwb3r">
-                <div class="card-header"><h2 class="m-0">Blue Card</h2></div>
-                <div class="card-body">
-                  <p class="card-text">What is going on?!</p>
-                </div>
-                <div class="card-footer">
-                  <a
-                    href="#"
-                    class="btn btn-outline-light btn-lg btn-block delete-button"
-                    >Löschen</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
+          <div class="row mt-5" id="notes"></div>
         </div>
       </section>
     </main>

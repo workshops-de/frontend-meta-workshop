@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Notes app</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="stylesheet" href="ressources/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Notes App</a>
+        <div class="form-inline ml-auto my-0">
+          <button class="btn btn-outline-success my-0" id="save" type="button">
+            Save
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <div class="container mt-5">
+          <div class="row">
+            <div class="col-sm">
+              <form id="form">
+                <div class="form-group">
+                  <label for="title">Title</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="title"
+                    required
+                    autofocus
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="text">Note</label>
+                  <textarea
+                    class="form-control"
+                    id="text"
+                    cols="50"
+                    rows="8"
+                    required
+                  ></textarea>
+                </div>
+                <div class="form-group">
+                  <label for="color">Color</label>
+                  <select class="form-control" id="color" required>
+                    <option value="">Select a color</option>
+                    <option value="danger">Red</option>
+                    <option value="success">Green</option>
+                    <option value="primary">Blue</option>
+                    <option value="warning">Yellow</option>
+                  </select>
+                </div>
+                <button type="submit" id="submit" class="btn btn-primary mt-2">
+                  Submit
+                </button>
+              </form>
+            </div>
+          </div>
+          <div class="row mt-5" id="notes">
+            <div class="col-sm-3">
+              <div class="card text-white bg-danger mb-3" id="n8raa">
+                <div class="card-header"><h2 class="m-0">Note Title</h2></div>
+                <div class="card-body">
+                  <p class="card-text">This is my description</p>
+                </div>
+                <div class="card-footer">
+                  <a
+                    href="#"
+                    class="btn btn-outline-light btn-lg btn-block delete-button"
+                    >Löschen</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="card text-white bg-warning mb-3" id="zv07uo">
+                <div class="card-header">
+                  <h2 class="m-0">Testing Title 2</h2>
+                </div>
+                <div class="card-body">
+                  <p class="card-text">Bla bla bla</p>
+                </div>
+                <div class="card-footer">
+                  <a
+                    href="#"
+                    class="btn btn-outline-light btn-lg btn-block delete-button"
+                    >Löschen</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="card text-white bg-success mb-3" id="8rojjp">
+                <div class="card-header"><h2 class="m-0">Title 3</h2></div>
+                <div class="card-body">
+                  <p class="card-text">Lorem ipsum dolor sit amet</p>
+                </div>
+                <div class="card-footer">
+                  <a
+                    href="#"
+                    class="btn btn-outline-light btn-lg btn-block delete-button"
+                    >Löschen</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="card text-white bg-primary mb-3" id="xwb3r">
+                <div class="card-header"><h2 class="m-0">Blue Card</h2></div>
+                <div class="card-body">
+                  <p class="card-text">What is going on?!</p>
+                </div>
+                <div class="card-footer">
+                  <a
+                    href="#"
+                    class="btn btn-outline-light btn-lg btn-block delete-button"
+                    >Löschen</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

@@ -25,7 +25,8 @@ $(function () {
       id,
       $formFields.title.val(),
       $formFields.text.val(),
-      $formFields.color.val()
+      $formFields.color.val(),
+      moment().valueOf()
     );
     notes.push(note);
 
@@ -56,6 +57,10 @@ $(function () {
     var $cardText = $('<p>')
       .addClass('card-text')
       .text(note.text)
+      .appendTo($cardBody);
+    var $cardDate = $('<small>')
+      .addClass('card-text text-white-50')
+      .text(moment(note.date).fromNow())
       .appendTo($cardBody);
 
     var $cardFooter = $('<div>').addClass('card-footer').appendTo($card);

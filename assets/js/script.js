@@ -94,11 +94,31 @@ $(function () {
     removeCard(id);
   }
 
+  function saveToStorage() {
+    localStorage.setItem('notes', JSON.stringify(notes));
+  }
+
+  function loadFromStorage() {
+    var savedNotes = localStorage.getItem('notes');
+    if (savedNotes) {
+      savedNotes = JSON.parse(savedNotes);
+      notes = savedNotes;
+
+      for (var i = 0; i < notes.length; i++) {
+        appendNote(notes[i]);
+      }
+    }
+  }
+
   // event listener
   $('#notes').on('click', '.delete-button', function (e) {
     e.preventDefault();
     e.stopPropagation();
     deleteNote(e);
+  });
+
+  $('#save').on('click', function (e) {
+    saveToStorage();
   });
 
   // Form validation
@@ -112,4 +132,7 @@ $(function () {
       addNote();
     }
   });
+
+  // Init notes
+  loadFromStorage();
 });

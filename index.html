@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Notes app</title>
+    <title>Notes</title>
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
@@ -25,16 +25,44 @@
     <script type="text/javascript" src="ressources/moment/de.min.js"></script>
 
     <script type="text/javascript" src="assets/js/Note.js"></script>
-    <script type="text/javascript" src="assets/js/script.js"></script>
+    <script type="text/javascript" src="assets/js/notes.js"></script>
   </head>
   <body>
     <header>
-      <nav class="navbar navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Notes App</a>
-        <div class="form-inline ml-auto my-0">
-          <button class="btn btn-outline-success my-0" id="save" type="button">
-            Save
-          </button>
+      <nav class="navbar navbar-dark bg-dark navbar-expand">
+        <a class="navbar-brand" href="#">Widget App</a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html"
+                >Notes <span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="weather.html">Weather</a>
+            </li>
+          </ul>
+          <div class="form-inline my-0">
+            <button
+              class="btn btn-outline-success my-0"
+              id="save"
+              type="button"
+            >
+              Save
+            </button>
+          </div>
         </div>
       </nav>
     </header>

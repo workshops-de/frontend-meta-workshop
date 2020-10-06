@@ -53,24 +53,6 @@
               >
             </li>
           </ul>
-          <div class="form-inline my-0">
-            <form id="form" class="needs-validation" novalidate>
-              <div class="form-group">
-                <label class="text-light pr-2" for="location">Location</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="location"
-                  placeholder="Cologne"
-                  required
-                  autofocus
-                />
-                <div class="invalid-feedback">
-                  Please enter a location.
-                </div>
-              </div>
-            </form>
-          </div>
         </div>
       </nav>
     </header>
@@ -90,17 +72,20 @@
             <div id="widget" class="col col-6">
               <div class="card mx-auto mb-3">
                 <!-- HEADER -->
-                <h4 class="card-header">
+                <h4 class="card-header bg-dark text-light">
                   <span id="city">New York</span>
                   <span id="time">Sunday, 20:39</span>
                 </h4>
 
                 <!-- TODAYS DATA -->
-                <div class="card-body">
+                <div class="card-body bg-primary text-dark">
                   <div class="row">
                     <div class="col-7 text-center">
                       <p id="desc">Sunny</p>
                       <div class="row py-24 justify-content-center">
+                        <div class="col-auto">
+                          <i id="icon"></i>
+                        </div>
                         <div class="col-auto">
                           <p id="temp">0</p>
                           <p id="celsius" class="degree">°C</p>
@@ -116,12 +101,12 @@
                         </tr>
                         <tr>
                           <td class="text-left">
-                            Humidity: <span id="humidity">81 %</span>
+                            Humidity: <span id="humidity">81 %</span> 
                           </td>
                         </tr>
                         <tr>
                           <td class="text-left pb-3">
-                            Cloudiness: <span id="cloudiness">75 %</span>
+                            Cloudiness: <span id="cloudiness">75 %</span> 
                           </td>
                         </tr>
                         <tr>

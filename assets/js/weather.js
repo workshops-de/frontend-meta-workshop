@@ -32,6 +32,11 @@ $(function () {
 
   function setWeather(weather) {
     $ui.temp.text(weather.temp.toFixed(0));
+    $ui.icon.html(
+      "<img src='http://openweathermap.org/img/wn/" +
+        weather.icon +
+        "@2x.png' />"
+    );
     $ui.desc.text(weather.desc);
     $ui.city.text(weather.city);
     $ui.wind.text(weather.wind.toFixed(0) + ' km/h');
@@ -51,6 +56,11 @@ $(function () {
 
   function setForecastDay(selector, forecast) {
     $(selector + ' > h3').text(forecast.weekDay);
+    $(selector + ' > div').html(
+      "<img src='http://openweathermap.org/img/wn/" +
+        forecast.icon +
+        "@2x.png' />"
+    );
     $(selector + ' span')
       .eq(0)
       .text(forecast.max.toFixed(0));
@@ -60,8 +70,6 @@ $(function () {
   }
 
   function fetchWeather(lat, long) {
-    $cards.loading.show();
-
     var weather = null;
     var forecast = [];
     fetch(
@@ -127,7 +135,6 @@ $(function () {
   }
 
   function success(position) {
-    $cards.initial.hide();
     fetchWeather(position.coords.latitude, position.coords.longitude);
   }
 
@@ -136,6 +143,8 @@ $(function () {
   $cards.widget.hide();
 
   if (navigator.geolocation) {
+    $cards.initial.hide();
+    $cards.loading.show();
     navigator.geolocation.getCurrentPosition(success, error);
   } else {
     $cards.initial.text('Your Browser does not support the geolocation API.');

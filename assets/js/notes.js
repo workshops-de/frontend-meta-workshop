@@ -1,15 +1,15 @@
 $(function () {
   // Form reference
-  const $form = $('#form');
+  const $form = $("#form");
 
   const $formFields = {
-    title: $('#title'),
-    text: $('#text'),
-    color: $('#color'),
-    submit: $('#submit'),
+    title: $("#title"),
+    text: $("#text"),
+    color: $("#color"),
+    submit: $("#submit"),
   };
 
-  const $notes = $('#notes');
+  const $notes = $("#notes");
 
   // Notes model
   const notes = [];
@@ -32,45 +32,45 @@ $(function () {
 
     appendNote(note);
 
-    $formFields.title.val('');
-    $formFields.text.val('');
-    $formFields.color.val('');
-    $formFields.title.trigger('focus');
+    $formFields.title.val("");
+    $formFields.text.val("");
+    $formFields.color.val("");
+    $formFields.title.trigger("focus");
   }
 
   function appendNote(note) {
-    const $column = $('<div>').addClass('col-sm-3');
+    const $column = $("<div>").addClass("col-sm-3");
 
-    const $card = $('<div>')
-      .addClass('card text-white bg-' + note.color + ' mb-3')
-      .attr('id', note.id)
+    const $card = $("<div>")
+      .addClass("card text-white bg-" + note.color + " mb-3")
+      .attr("id", note.id)
       .appendTo($column);
 
-    const $cardHeader = $('<div>').addClass('card-header');
-    const $cardTitle = $('<h2>')
-      .addClass('m-0')
+    const $cardHeader = $("<div>").addClass("card-header");
+    const $cardTitle = $("<h2>")
+      .addClass("m-0")
       .text(note.title)
       .appendTo($cardHeader);
     $cardHeader.appendTo($card);
 
-    const $cardBody = $('<div>').addClass('card-body').appendTo($card);
-    const $cardText = $('<p>')
-      .addClass('card-text')
+    const $cardBody = $("<div>").addClass("card-body").appendTo($card);
+    const $cardText = $("<p>")
+      .addClass("card-text")
       .text(note.text)
       .appendTo($cardBody);
-    const $cardDate = $('<small>')
-      .addClass('card-text text-white-50')
+    const $cardDate = $("<small>")
+      .addClass("card-text text-white-50")
       .text(moment(note.date).fromNow())
       .appendTo($cardBody);
 
-    const $cardFooter = $('<div>').addClass('card-footer').appendTo($card);
-    const $deleteButton = $('<a>')
-      .attr('href', '#')
-      .addClass('btn btn-outline-light btn-lg btn-block delete-button')
-      .html('Löschen')
+    const $cardFooter = $("<div>").addClass("card-footer").appendTo($card);
+    const $deleteButton = $("<a>")
+      .attr("href", "#")
+      .addClass("btn btn-outline-light btn-lg btn-block delete-button")
+      .html("Löschen")
       .appendTo($cardFooter);
 
-    $column.hide().appendTo($notes).fadeIn('slow');
+    $column.hide().appendTo($notes).fadeIn("slow");
   }
 
   function removeCard(id) {
@@ -85,9 +85,9 @@ $(function () {
   }
 
   function deleteNote(e) {
-    const $card = $(e.target).parents('.card');
-    const id = $card.attr('id');
-    $card.parent().fadeOut('slow', function () {
+    const $card = $(e.target).parents(".card");
+    const id = $card.attr("id");
+    $card.parent().fadeOut("slow", function () {
       $(this).remove();
     });
 
@@ -95,11 +95,11 @@ $(function () {
   }
 
   function saveToStorage() {
-    localStorage.setItem('notes', JSON.stringify(notes));
+    localStorage.setItem("notes", JSON.stringify(notes));
   }
 
   function loadFromStorage() {
-    const savedNotes = localStorage.getItem('notes');
+    const savedNotes = localStorage.getItem("notes");
     if (savedNotes) {
       savedNotes = JSON.parse(savedNotes);
       notes = savedNotes;
@@ -111,24 +111,24 @@ $(function () {
   }
 
   // event listener
-  $('#notes').on('click', '.delete-button', function (e) {
+  $("#notes").on("click", ".delete-button", function (e) {
     e.preventDefault();
     e.stopPropagation();
     deleteNote(e);
   });
 
-  $('#save').on('click', function (e) {
+  $("#save").on("click", function (e) {
     saveToStorage();
   });
 
   // Form validation
-  $form.on('submit', function (e) {
+  $form.on("submit", function (e) {
     e.preventDefault();
     e.stopPropagation();
     if ($form[0].checkValidity() === false) {
-      $form.addClass('was-validated');
+      $form.addClass("was-validated");
     } else {
-      $form.removeClass('was-validated');
+      $form.removeClass("was-validated");
       addNote();
     }
   });

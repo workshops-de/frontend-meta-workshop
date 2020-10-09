@@ -1,14 +1,14 @@
 $(function () {
   // API KEY
-  var API_KEY = 'a624eba90a17930f04a258f921f06bff';
+  const API_KEY = 'a624eba90a17930f04a258f921f06bff';
 
-  var $cards = {
+  const $cards = {
     initial: $('#initial'),
     loading: $('#loading'),
     widget: $('#widget'),
   };
 
-  var $ui = {
+  const $ui = {
     temp: $('#temp'),
     icon: $('#icon'),
     desc: $('#desc'),
@@ -70,8 +70,8 @@ $(function () {
   }
 
   function fetchWeather(lat, long) {
-    var weather = null;
-    var forecast = [];
+    let weather = null;
+    const forecast = [];
     fetch(
       'https://api.openweathermap.org/data/2.5/onecall?lat=' +
         lat +

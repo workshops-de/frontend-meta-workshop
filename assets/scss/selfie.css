@@ -1,0 +1,95 @@
+.video-container {
+  position: relative;
+  overflow: hidden;
+  border: 20px solid #f0f0f0;
+  border-radius: 10px;
+}
+
+.video-container__form {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+
+.video-container__label {
+  margin-right: 1rem;
+}
+
+.video-container__input {
+  flex-grow: 1;
+}
+
+.video-container__video {
+  width: 100%;
+  height: 100%;
+  filter: grayscale(var(--grayscale)) blur(var(--blur)) hue-rotate(var(--hue));
+  overflow: hidden;
+}
+
+.video-container__btn {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  font-size: 1.5rem;
+  background-color: #333;
+  outline: 0;
+  border: 0px;
+  border-radius: 50%;
+  transition: transform 0.25s ease-in-out, opacity 0.25s ease-in-out;
+}
+
+.video-container__btn--shoot {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+}
+
+.video-container__btn--delete {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+}
+
+.video-container__btn--hidden.btn--delete {
+  transform: translateY(200%);
+}
+
+.video-container__btn--hidden.btn--shoot {
+  transform: translateX(200%);
+}
+
+.video-container__btn--hidden {
+  display: none;
+}
+
+.video-container__btn-shoot:hover {
+  color: salmon;
+}
+
+.video-container__canvas {
+  display: none;
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 0;
+  left: 0;
+  border: 5px solid black;
+}
+
+.video-container__image {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.video-container__image--hidden {
+  opacity: 0;
+}

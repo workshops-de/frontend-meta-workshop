@@ -1,1 +1,131 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>Weather</title><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><link rel="stylesheet" href="/style.36379309.css"><script type="text/javascript" src="/assets.a2605bd6.js"></script></head><body> <header> <nav class="navbar navbar-dark bg-dark navbar-expand"> <a class="navbar-brand" href="#">Widget App</a> <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button> <div class="collapse navbar-collapse" id="navbarNavAltMarkup"> <ul class="navbar-nav mr-auto"> <li class="nav-item"> <a class="nav-link" href="/index.html">Notes</a> </li> <li class="nav-item active"> <a class="nav-link" href="/weather.html">Weather <span class="sr-only">(current)</span></a> </li> </ul> </div> </nav> </header> <main> <section id="weather-app"> <div class="container mt-5"> <div class="row justify-content-center"> <div id="initial" class="col col-6 text-center h1"> Please enter a location first </div> <div id="loading" class="col col-6 text-center"> <div class="spinner-grow" role="status"> <span class="sr-only">Loading...</span> </div> </div> <div id="widget" class="col col-6"> <div class="card mx-auto mb-3">  <h4 class="card-header bg-dark text-light"> <span id="city">New York</span> <span id="time">Sunday, 20:39</span> </h4>  <div class="card-body bg-primary text-dark"> <div class="row"> <div class="col-7 text-center"> <p id="desc">Sunny</p> <div class="row py-24 justify-content-center"> <div class="col-auto"> <i id="icon"></i> </div> <div class="col-auto"> <p id="temp">0</p> <p id="celsius" class="degree">°C</p> </div> </div> </div> <div class="col-5 data-tables"> <table class="text-center"> <tr> <td class="text-left"> Wind: <span id="wind">9 km/h</span> </td> </tr> <tr> <td class="text-left"> Humidity: <span id="humidity">81 %</span> </td> </tr> <tr> <td class="text-left pb-3"> Cloudiness: <span id="cloudiness">75 %</span> </td> </tr> <tr> <td class="text-left"> Sunrise: <span id="sunrise">7:38</span> </td> </tr> <tr> <td class="text-left"> Sunset: <span id="sunset">19:04</span> </td> </tr> </table> </div> </div> </div>  <div class="card-footer d-flex ml-0 text-center bg-dark"> <div id="first-day" class="col p-2 text-light"> <h3>MON</h3> <div></div> <p><span>1°</span> <span class="text-primary">-1°</span></p> </div> <div id="second-day" class="col p-2 text-light"> <h3>TUE</h3> <div></div> <p><span>1°</span> <span class="text-primary">-1°</span></p> </div> <div id="third-day" class="col p-2 text-light"> <h3>WED</h3> <div></div> <p><span>1°</span> <span class="text-primary">-1°</span></p> </div> <div id="forth-day" class="col p-2 text-light"> <h3>FRI</h3> <div></div> <p><span>1°</span> <span class="text-primary">-1°</span></p> </div> </div> </div> </div> </div> </div> </section> </main> </body></html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Weather</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="/style.5d3ad0c4.css">
+    <script type="text/javascript" src="/assets.71ddc51b.js"></script>
+  <script src="/selfie.js"></script></head>
+  <body>
+    <header>
+      <nav class="navbar navbar-dark bg-dark navbar-expand">
+        <a class="navbar-brand" href="#">Widget App</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/index.html">Notes</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="/weather.html">Weather <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/selfie.html">Selfie Booth</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section id="weather-app">
+        <div class="container mt-5">
+          <div class="row justify-content-center">
+            <div id="initial" class="col col-6 text-center h1">
+              Please enter a location first
+            </div>
+            <div id="loading" class="col col-6 text-center">
+              <div class="spinner-grow" role="status">
+                <span class="sr-only">Loading...</span>
+              </div>
+            </div>
+            <div id="widget" class="col col-6">
+              <div class="card mx-auto mb-3">
+                <!-- HEADER -->
+                <h4 class="card-header bg-dark text-light">
+                  <span id="city">New York</span>
+                  <span id="time">Sunday, 20:39</span>
+                </h4>
+
+                <!-- TODAYS DATA -->
+                <div class="card-body bg-primary text-dark">
+                  <div class="row">
+                    <div class="col-7 text-center">
+                      <p id="desc">Sunny</p>
+                      <div class="row py-24 justify-content-center">
+                        <div class="col-auto">
+                          <i id="icon"></i>
+                        </div>
+                        <div class="col-auto">
+                          <p id="temp">0</p>
+                          <p id="celsius" class="degree">°C</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-5 data-tables">
+                      <table class="text-center">
+                        <tr>
+                          <td class="text-left">
+                            Wind: <span id="wind">9 km/h</span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="text-left">
+                            Humidity: <span id="humidity">81 %</span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="text-left pb-3">
+                            Cloudiness: <span id="cloudiness">75 %</span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="text-left">
+                            Sunrise: <span id="sunrise">7:38</span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="text-left">
+                            Sunset: <span id="sunset">19:04</span>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- FORECAST -->
+                <div class="card-footer d-flex ml-0 text-center bg-dark">
+                  <div id="first-day" class="col p-2 text-light">
+                    <h3>MON</h3>
+                    <div></div>
+                    <p><span>1°</span> <span class="text-primary">-1°</span></p>
+                  </div>
+                  <div id="second-day" class="col p-2 text-light">
+                    <h3>TUE</h3>
+                    <div></div>
+                    <p><span>1°</span> <span class="text-primary">-1°</span></p>
+                  </div>
+                  <div id="third-day" class="col p-2 text-light">
+                    <h3>WED</h3>
+                    <div></div>
+                    <p><span>1°</span> <span class="text-primary">-1°</span></p>
+                  </div>
+                  <div id="forth-day" class="col p-2 text-light">
+                    <h3>FRI</h3>
+                    <div></div>
+                    <p><span>1°</span> <span class="text-primary">-1°</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

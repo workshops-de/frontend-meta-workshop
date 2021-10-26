@@ -24,7 +24,14 @@
             <h4 class="card-header">Weather</h4>
 
             <div class="card-body bg-primary text-dark">
-              <WeatherInfo :weather="state.weather" />
+              <WeatherInfo
+                :weather="state.weather"
+                v-show="
+                  state.weather &&
+                  state.weather.icon &&
+                  state.weather.icon !== ''
+                "
+              />
             </div>
           </div>
         </div>

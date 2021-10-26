@@ -19,9 +19,7 @@
                 required
                 autofocus
               />
-              <div class="invalid-feedback">
-                Please enter a valid title.
-              </div>
+              <div class="invalid-feedback">Please enter a valid title.</div>
             </div>
             <div class="form-group">
               <label for="text">Note</label>
@@ -43,13 +41,9 @@
                 <option value="primary">Blue</option>
                 <option value="warning">Yellow</option>
               </select>
-              <div class="invalid-feedback">
-                Please select a valid color.
-              </div>
+              <div class="invalid-feedback">Please select a valid color.</div>
             </div>
-            <button type="submit" class="btn btn-primary mt-2">
-              Submit
-            </button>
+            <button type="submit" class="btn btn-primary mt-2">Submit</button>
           </form>
         </div>
       </div>

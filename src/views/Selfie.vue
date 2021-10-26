@@ -161,20 +161,20 @@ export default defineComponent({
 
     async function getVideoStream() {
       try {
-        const stream = await navigator.mediaDevices.getUserMedia({
+        state.stream = await navigator.mediaDevices.getUserMedia({
           video: {
             width: 600,
             height: 600,
           },
         });
-        state.stream = stream;
       } catch (err) {
-        console.error(err.message);
+        if (err instanceof Error) {
+          console.error(err.message);
+        }
       }
     }
 
-    //ts-lint ignore-next-lint
-    if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+    if (navigator.mediaDevices) {
       getVideoStream();
     }
 

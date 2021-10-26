@@ -1,7 +1,7 @@
 <template>
   <div class="col p-2 text-light">
     <h3>{{ weekDay }}</h3>
-    <img :src="weatherIcon" />
+    <img :src="weatherIcon" alt="weather icon" />
     <p>
       {{ max }}° <span class="text-primary">{{ min }}°</span>
     </p>

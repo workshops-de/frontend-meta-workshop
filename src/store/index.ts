@@ -1,5 +1,5 @@
-import { Weather, Forecast } from './../interfaces/weather';
-import { Note } from './../interfaces/notes';
+import { Weather, Forecast } from '@/interfaces/weather';
+import { Note } from '@/interfaces/notes';
 import { createStore } from 'vuex';
 
 interface WeatherState {

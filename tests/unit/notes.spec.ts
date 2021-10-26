@@ -39,11 +39,8 @@ describe('Notes.vue', () => {
     await wrapper.find('select').setValue('success');
     await wrapper.find('form').trigger('submit.prevent');
 
-    expect(
-      wrapper
-        .findComponent(NotesItem)
-        .find('.card')
-        .classes(),
-    ).toContain('bg-success');
+    expect(wrapper.findComponent(NotesItem).find('.card').classes()).toContain(
+      'bg-success',
+    );
   });
 });

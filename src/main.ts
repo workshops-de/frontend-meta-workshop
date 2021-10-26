@@ -6,7 +6,4 @@ import store from './store';
 import 'bootstrap/scss/bootstrap.scss';
 import '@fortawesome/fontawesome-free/css/all.css';
 
-createApp(App)
-  .use(store)
-  .use(router)
-  .mount('#app');
+createApp(App).use(store).use(router).mount('#app');

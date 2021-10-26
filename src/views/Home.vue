@@ -4,9 +4,7 @@
       <div class="row">
         <div class="col col-4">
           <div class="card mx-auto mb-3">
-            <h4 class="card-header">
-              Notes
-            </h4>
+            <h4 class="card-header">Notes</h4>
 
             <div class="card-body text-dark">
               <div class="row">
@@ -23,9 +21,7 @@
         </div>
         <div class="col col-4">
           <div class="card mx-auto mb-3">
-            <h4 class="card-header">
-              Weather
-            </h4>
+            <h4 class="card-header">Weather</h4>
 
             <div class="card-body bg-primary text-dark">
               <WeatherInfo :weather="state.weather" />
@@ -34,9 +30,7 @@
         </div>
         <div class="col col-4">
           <div class="card mx-auto mb-3">
-            <h4 class="card-header">
-              Selfie
-            </h4>
+            <h4 class="card-header">Selfie</h4>
 
             <div class="card-body text-dark">
               <img

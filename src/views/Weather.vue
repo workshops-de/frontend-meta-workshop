@@ -7,7 +7,7 @@
         </div>
         <div class="col col-6 text-center" v-else-if="state.loading">
           <div class="spinner-grow" role="status">
-            <span class="sr-only">Loading...</span>
+            <span class="sr-only">Loading ...</span>
           </div>
         </div>
         <div class="col col-6" v-else>
@@ -18,7 +18,7 @@
               <span class="weather__time">{{ state.time }}</span>
             </h4>
 
-            <!-- TODAYS DATA -->
+            <!-- TODAY'S DATA -->
             <div class="card-body bg-primary text-dark">
               <WeatherInfo :weather="state.weather" />
             </div>
@@ -29,6 +29,7 @@
                 v-for="forecast in state.forecast"
                 :key="forecast.weekDay"
                 v-bind="forecast"
+                :icon="forecast.icon"
               />
             </div>
           </div>
@@ -45,6 +46,8 @@ import { WeatherResponse, WeatherState } from '@/interfaces/weather';
 import WeatherForecast from '@/components/WeatherForecast.vue';
 import WeatherInfo from '@/components/WeatherInfo.vue';
 import { useStore } from 'vuex';
+import { PositionError } from '@/interfaces/position-error';
+import { Position } from '@/interfaces/position';
 
 moment.locale('de');
 
@@ -59,7 +62,6 @@ export default defineComponent({
     const API_KEY = 'a624eba90a17930f04a258f921f06bff';
 
     const store = useStore();
-
     const state = reactive<WeatherState>({
       loading: false,
       error: '',
@@ -95,9 +97,9 @@ export default defineComponent({
       }),
     });
 
-    function handleRequestError(error: string) {
+    function handleRequestError(errorMessage: string) {
       state.loading = false;
-      state.error = error;
+      state.error = errorMessage;
     }
 
     async function fetchWeather(lat: number, long: number) {
@@ -120,7 +122,7 @@ export default defineComponent({
         };
 
         state.forecast = [];
-        json.daily.forEach(function(weather) {
+        json.daily.forEach(function (weather) {
           if (state.forecast.length < 4) {
             state.forecast = [
               ...state.forecast,
@@ -135,8 +137,10 @@ export default defineComponent({
         });
 
         state.time = moment().format('dddd, LT');
-      } catch (e) {
-        handleRequestError(e);
+      } catch (err) {
+        if (err instanceof Error) {
+          handleRequestError(err.message);
+        }
       }
     }
 
@@ -166,7 +170,7 @@ export default defineComponent({
       state.loading = true;
       navigator.geolocation.getCurrentPosition(success, error);
     } else {
-      state.error = 'Your Browser does not support the geolocation API.';
+      state.error = 'Your Browser does not support the Geolocation API.';
     }
 
     return {

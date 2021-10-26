@@ -59,7 +59,7 @@ export default defineComponent({
     },
   },
   emits: {
-    removed: payload => payload.id,
+    removed: (payload) => payload.id,
   },
   setup(props, { emit }) {
     const state = reactive({

@@ -5,7 +5,7 @@
       <div class="row py-24 justify-content-center">
         <div class="col-auto">
           <i class="weather-info__icon">
-            <img :src="weatherIcon" />
+            <img :src="weatherIcon" alt="weather icon" />
           </i>
         </div>
         <div class="col-auto">

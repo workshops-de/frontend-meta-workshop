@@ -1,4 +1,4 @@
-# frontend-meta-workshop-2
+# frontend-meta-workshop
 
 ## Project setup
 ```

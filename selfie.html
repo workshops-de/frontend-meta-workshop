@@ -2,18 +2,17 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Notes</title>
+    <title>Weather</title>
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <link rel="stylesheet" href="assets/scss/style.scss" />
     <script type="text/javascript" src="assets/index.ts"></script>
   </head>
   <body>
     <header>
       <nav class="navbar navbar-dark bg-dark navbar-expand">
-        <a class="navbar-brand" href="#">Widget App</a>
+        <a class="navbar-brand" href="index.html">Widget App</a>
 
         <button
           class="navbar-toggler"
@@ -54,17 +53,28 @@
                   autoplay
                   id="video"
                   class="video-container__video"
-                  style="--grayscale: 0; --blur: 0px; --hue: 0deg"
+                  style="--grayscale: 0; --blur: 0px; --hue: 0deg;"
                 ></video>
                 <canvas class="video-container__canvas" id="canvas"></canvas>
-                <img src="" alt="" class="video-container__image video-container__image--hidden" />
-                <button class="video-container__btn video-container__btn--delete video-container__btn--hidden">
+                <img
+                  alt=""
+                  class="video-container__image video-container__image--hidden"
+                />
+                <button
+                  class="video-container__btn video-container__btn--delete video-container__btn--hidden"
+                >
                   <i class="fa fa-trash-alt"></i>
                 </button>
-                <button class="video-container__btn video-container__btn--shoot"><i class="fa fa-camera"></i></button>
+                <button
+                  class="video-container__btn video-container__btn--shoot"
+                >
+                  <i class="fa fa-camera"></i>
+                </button>
               </div>
               <form class="video-container__form">
-                <label class="video-container__label" for="slider-grayscale">Grayscale</label>
+                <label class="video-container__label" for="slider-grayscale"
+                  >Grayscale</label
+                >
                 <input
                   type="range"
                   name="grayscale"
@@ -74,7 +84,7 @@
                   value="0"
                   class="video-container_input"
                 />
-          
+
                 <label for="slider-hue">Hue</label>
                 <input
                   type="range"
@@ -85,8 +95,10 @@
                   value="0"
                   class="video-container__input"
                 />
-          
-                <label class="video-container__label" for="slider-blur">Blur</label>
+
+                <label class="video-container__label" for="slider-blur"
+                  >Blur</label
+                >
                 <input
                   type="range"
                   name="blur"

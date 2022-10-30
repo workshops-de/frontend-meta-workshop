@@ -110,7 +110,7 @@ $(function () {
             return response.json();
           })
           .then(function (data) {
-            weather.city = data.address.town;
+            weather.city = data.address.city;
             updateUI(weather, forecast);
           });
       })

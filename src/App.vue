@@ -17,6 +17,8 @@ export default defineComponent({
 </script>
 
 <style lang="scss">
+@import 'bootstrap/scss/bootstrap-utilities';
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
